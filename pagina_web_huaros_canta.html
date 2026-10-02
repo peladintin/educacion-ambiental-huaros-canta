@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educación Ambiental | Huaros y Canta</title>
+<style>
+:root{
+  --green:#1f6f5b;
+  --green2:#2e8b70;
+  --light:#eef8f3;
+  --blue:#246b8f;
+  --dark:#17352e;
+  --text:#30443f;
+  --white:#fff;
+  --shadow:0 12px 35px rgba(23,53,46,.12);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#f7fbf9;line-height:1.65}
+nav{
+  position:fixed;top:0;width:100%;z-index:10;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(0,0,0,.08);
+  display:flex;justify-content:space-between;align-items:center;padding:14px 6%;
+}
+.logo{font-weight:800;color:var(--green);font-size:1.05rem}
+nav a{color:var(--dark);text-decoration:none;margin-left:20px;font-size:.9rem;font-weight:600}
+nav a:hover{color:var(--green2)}
+.hero{
+  min-height:92vh;padding:145px 7% 80px;display:flex;align-items:center;
+  background:linear-gradient(135deg,#dff4e9 0%,#eef8f3 48%,#dbeef5 100%);
+}
+.hero-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.badge{display:inline-block;background:#fff;color:var(--green);padding:8px 15px;border-radius:30px;font-weight:700;font-size:.85rem;box-shadow:var(--shadow)}
+h1{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.02;margin:20px 0;color:var(--dark)}
+.hero p{font-size:1.12rem;max-width:700px}
+.btn{display:inline-block;margin-top:20px;padding:13px 22px;background:var(--green);color:white;border-radius:10px;text-decoration:none;font-weight:700}
+.btn:hover{background:var(--green2)}
+.hero-card{
+  background:rgba(255,255,255,.82);padding:30px;border-radius:25px;box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.8)
+}
+.mountain{font-size:7rem;text-align:center;margin-bottom:5px}
+section{padding:85px 7%}
+.container{max-width:1150px;margin:auto}
+.section-title{text-align:center;color:var(--dark);font-size:2.2rem;margin:0 0 12px}
+.subtitle{text-align:center;max-width:760px;margin:0 auto 45px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.card h3{color:var(--green);margin-top:8px}
+.icon{font-size:2rem}
+.problem{background:#fff}
+.problem-box{background:linear-gradient(135deg,#f0f8f5,#edf6fa);padding:35px;border-radius:24px}
+.problem-list{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:25px}
+.problem-list div{background:white;padding:18px;border-radius:12px}
+.question{
+  margin-top:30px;background:var(--dark);color:white;padding:28px;border-radius:18px;
+  font-size:1.2rem;text-align:center
+}
+.objectives{background:var(--light)}
+.obj-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.obj-card{background:#fff;padding:28px;border-radius:18px;box-shadow:var(--shadow)}
+.obj-card ul{padding-left:20px}
+.tic{background:linear-gradient(135deg,#17352e,#246b8f);color:white}
+.tic .section-title{color:white}
+.tic .subtitle{color:#e4f4f2}
+.tic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tic-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:25px;border-radius:18px}
+.proposal{background:#f7fbf9}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{position:relative;background:white;padding:30px;border-radius:18px;box-shadow:var(--shadow)}
+.number{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:50%;background:var(--green);color:white;font-weight:800}
+.method{background:#eef6fb}
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.method-card{background:white;padding:28px;border-radius:18px}
+.conclusion{background:linear-gradient(135deg,#dff4e9,#dbeef5);text-align:center}
+.conclusion p{max-width:850px;margin:20px auto;font-size:1.15rem}
+footer{background:#122a25;color:#d9ece7;text-align:center;padding:30px 7%}
+@media(max-width:800px){
+  nav{padding:12px 4%} nav div:last-child{display:none}
+  .hero-grid,.obj-grid,.method-grid{grid-template-columns:1fr}
+  .cards,.tic-grid,.steps{grid-template-columns:1fr}
+  .problem-list{grid-template-columns:1fr}
+  section{padding:65px 5%}
+  .hero{padding:120px 5% 60px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🌿 HUAROS & CANTA</div>
+  <div>
+    <a href="#problema">Problema</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#tic">TICs</a>
+    <a href="#propuesta">Propuesta</a>
+    <a href="#metodologia">Metodología</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="badge">EDUCACIÓN AMBIENTAL + TECNOLOGÍA</span>
+      <h1>Educación Ambiental en Huaros y Canta</h1>
+      <p>El uso de las Tecnologías de la Información y la Comunicación como herramienta para fomentar la educación ambiental en zonas turísticas de la provincia de Canta.</p>
+      <a class="btn" href="#problema">Conocer el proyecto ↓</a>
+    </div>
+    <div class="hero-card">
+      <div class="mountain">🏔️🌿</div>
+      <h2>Turismo responsable</h2>
+      <p>Conservar los ríos, lagunas, flora y fauna altoandina requiere información accesible, participación local y prácticas responsables.</p>
+    </div>
+  </div>
+</header>
+
+<section id="problema" class="problem">
+<div class="container">
+  <h2 class="section-title">El problema ambiental</h2>
+  <p class="subtitle">Huaros y Canta reciben visitantes atraídos por sus paisajes andinos y recursos naturales, pero el crecimiento turístico también genera presión sobre el entorno.</p>
+  <div class="problem-box">
+    <div class="problem-list">
+      <div>♻️ <b>Residuos sólidos:</b> manejo inadecuado de la basura generada por la actividad turística.</div>
+      <div>💧 <b>Contaminación:</b> afectación de ríos y lagunas por residuos.</div>
+      <div>🔥 <b>Quema de pastizales:</b> una práctica que deteriora el entorno natural.</div>
+      <div>🦙 <b>Flora y fauna:</b> escaso conocimiento sobre su protección y conservación.</div>
+    </div>
+    <div class="question">¿De qué manera podemos fomentar la educación ambiental usando las TICs en las zonas turísticas de Huaros y Canta?</div>
+  </div>
+</div>
+</section>
+
+<section id="objetivos" class="objectives">
+<div class="container">
+  <h2 class="section-title">Objetivos del proyecto</h2>
+  <p class="subtitle">La propuesta busca utilizar herramientas digitales para fortalecer conocimientos, actitudes y prácticas responsables.</p>
+  <div class="obj-grid">
+    <div class="obj-card">
+      <h3>🎯 Objetivo general</h3>
+      <p>Fomentar la educación ambiental en las zonas turísticas de Huaros y Canta mediante el uso de las Tecnologías de la Información y la Comunicación.</p>
+    </div>
+    <div class="obj-card">
+      <h3>📌 Objetivos específicos</h3>
+      <ul>
+        <li>Crear canales de difusión mediante redes sociales.</li>
+        <li>Elaborar contenido audiovisual educativo.</li>
+        <li>Promover el reciclaje y el manejo adecuado de residuos.</li>
+        <li>Sensibilizar sobre flora y fauna altoandina.</li>
+        <li>Medir la conciencia ambiental mediante encuestas.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <h2 class="section-title">Conceptos clave</h2>
+  <p class="subtitle">Tres conceptos articulan la propuesta de investigación.</p>
+  <div class="cards">
+    <div class="card"><div class="icon">🌱</div><h3>Ecoturismo</h3><p>Modalidad turística que busca conservar el entorno natural y favorecer a las comunidades locales, minimizando el impacto ambiental.</p></div>
+    <div class="card"><div class="icon">📚</div><h3>Educación ambiental</h3><p>Proceso que desarrolla conocimientos, actitudes y valores orientados a la protección y uso sostenible de los recursos naturales.</p></div>
+    <div class="card"><div class="icon">📱</div><h3>TICs</h3><p>Herramientas digitales como redes sociales, mensajería y plataformas de video que permiten difundir información de manera rápida y amplia.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="tic" class="tic">
+<div class="container">
+  <h2 class="section-title">¿Cómo pueden ayudar las TICs?</h2>
+  <p class="subtitle">Las herramientas digitales permiten acercar la educación ambiental a la población de forma constante y accesible.</p>
+  <div class="tic-grid">
+    <div class="tic-card"><h3>📲 Redes sociales</h3><p>WhatsApp, TikTok e Instagram pueden utilizarse para campañas, recordatorios y mensajes ambientales.</p></div>
+    <div class="tic-card"><h3>🎥 Videos educativos</h3><p>Contenido audiovisual sobre residuos, reciclaje, cuidado de ríos y lagunas, flora y fauna.</p></div>
+    <div class="tic-card"><h3>📢 Sensibilización</h3><p>La difusión continua busca generar cambios progresivos en los hábitos de cuidado del entorno.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="propuesta" class="proposal">
+<div class="container">
+  <h2 class="section-title">Propuesta de solución</h2>
+  <p class="subtitle">Una estrategia digital enfocada en información, sensibilización y participación.</p>
+  <div class="steps">
+    <div class="step"><span class="number">1</span><h3>Difundir</h3><p>Crear canales en redes sociales para compartir información ambiental de manera periódica.</p></div>
+    <div class="step"><span class="number">2</span><h3>Educar</h3><p>Publicar videos y materiales sobre conservación, reciclaje y manejo adecuado de residuos.</p></div>
+    <div class="step"><span class="number">3</span><h3>Evaluar</h3><p>Aplicar encuestas para comparar el nivel de conciencia ambiental antes y después de la difusión.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="metodologia" class="method">
+<div class="container">
+  <h2 class="section-title">Metodología</h2>
+  <p class="subtitle">El proyecto contempla recolectar y analizar información para evaluar el impacto de la propuesta.</p>
+  <div class="method-grid">
+    <div class="method-card"><h3>📝 Recolección de datos</h3><p>Se realizarán encuestas a pobladores de Huaros y Canta para conocer su nivel de conciencia ambiental y su acceso y uso habitual de redes sociales.</p></div>
+    <div class="method-card"><h3>📊 Procesamiento y análisis</h3><p>Los datos serán procesados en Excel y permitirán analizar los resultados e identificar qué canales y contenidos presentan mayor alcance y receptividad.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="conclusion">
+<div class="container">
+  <h2 class="section-title">Resultados esperados</h2>
+  <p>Se espera lograr mayor difusión de información ambiental, incrementar la conciencia de los pobladores, mejorar las prácticas de cuidado de los recursos naturales y generar una base estadística para futuras intervenciones.</p>
+  <a class="btn" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Volver al inicio ↑</a>
+</div>
+</section>
+
+<footer>
+  <p><b>Educación Ambiental en las Zonas Turísticas de Huaros y Canta</b></p>
+  <p>Proyecto académico sobre educación ambiental, ecoturismo y uso de TICs.</p>
+</footer>
+
+</body>
+</html>
